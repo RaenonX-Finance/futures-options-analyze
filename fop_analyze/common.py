@@ -4,10 +4,11 @@ from .const import (
     FONT_SIZE_LABEL, FONT_SIZE_MAIN_TITLE, FONT_NAME_MAIN, FONT_COLOR,
     MARGIN_X, MARGIN_Y, SPACE
 )
+from .props import DataProperties
 from .utils import get_config, get_plot_title
 
 
-def format_plot(fig, axes, props, index):
+def format_plot(fig, axes, props: DataProperties, index):
     fig.tight_layout()
 
     # If you have positive numbers and want to invert the x-axis of the left plot

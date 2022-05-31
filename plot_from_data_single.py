@@ -7,19 +7,19 @@ from fop_analyze.const import (
     FACE_COLOR, COLOR_CALL, COLOR_PUT, TITLE_CALL, TITLE_PUT, FONT_NAME_MAIN,
 )
 from fop_analyze.common import format_plot
-from fop_analyze.df import get_df
+from fop_analyze.df import get_df_from_data
 from fop_analyze.utils import get_config, get_file_props
 
 DATA_PATHS = glob.glob("data/*.csv")
 
 
-def main(data_path):
+def main(data_path: str):
     props = get_file_props(data_path)
-    df = get_df(data_path, props)
+    df = get_df_from_data(data_path, props)
 
     index = df.index
-    column_call = df["OI Call"]
-    column_put = df["OI Put"]
+    column_call = df[TITLE_CALL]
+    column_put = df[TITLE_PUT]
 
     # noinspection PyTypeChecker
     fig, axes = plt.subplots(

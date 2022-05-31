@@ -1,7 +1,7 @@
 # --- Plot style
 
 MARGIN_X = 0.05
-MARGIN_Y = 0.1
+MARGIN_Y = 0.07
 
 PLOT_WIDTH = 10
 PLOT_HEIGHT = {
@@ -33,8 +33,8 @@ COLOR_PUT = "#fd625e"
 COLOR_INCREASE = "#008641"
 COLOR_DECREASE = "#B10501"
 
-TITLE_CALL = "Call OI"
-TITLE_PUT = "Put OI"
+TITLE_CALL = "OI Call"
+TITLE_PUT = "OI Put"
 
 # Data properties
 

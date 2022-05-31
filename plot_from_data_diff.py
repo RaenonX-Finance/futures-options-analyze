@@ -6,31 +6,24 @@ from fop_analyze.const import (
     FACE_COLOR, FONT_NAME_MAIN, FONT_SIZE_TITLE,
     PLOT_HEIGHT, PLOT_WIDTH, TITLE_CALL, TITLE_PUT,
 )
-from fop_analyze.df import get_df
+from fop_analyze.df import get_df_from_data, get_df_diff
+from fop_analyze.props import DataProperties
 from fop_analyze.utils import get_config, get_file_props
 
 # Main should be the latest data
 
-DATA_PATH_MAIN = "data\\nqm22-options-eom-options-exp-05_31_22-show-all-side-by-side-intraday-05-29-2022.csv"
-DATA_PATH_SUB = "data\\nqm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-05-29-2022.csv"
+DATA_PATH_MAIN = "data\\esm22-options-eom-options-exp-05_31_22-show-all-side-by-side-intraday-05-29-2022.csv"
+DATA_PATH_SUB = "data\\esm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-05-29-2022.csv"
 
 
-def get_data_df(data_path_main, data_path_sub, props):
-    df_main = get_df(data_path_main, props)
-    df_sub = get_df(data_path_sub, props)
+def get_data_df(data_path_main: str, data_path_sub: str, props: DataProperties):
+    df_main = get_df_from_data(data_path_main, props)
+    df_sub = get_df_from_data(data_path_sub, props)
 
-    df_ret = df_main.merge(df_sub, suffixes=(" Main", " Sub"), left_index=True, right_index=True)
-    df_ret["OI Call B"] = df_ret[["OI Call Main", "OI Call Sub"]].min(axis=1)
-    df_ret["OI Call +"] = (df_ret["OI Call Main"] - df_ret["OI Call Sub"]).clip(lower=0)
-    df_ret["OI Call -"] = (df_ret["OI Call Sub"] - df_ret["OI Call Main"]).clip(lower=0)
-    df_ret["OI Put B"] = df_ret[["OI Put Main", "OI Put Sub"]].min(axis=1)
-    df_ret["OI Put +"] = (df_ret["OI Put Main"] - df_ret["OI Put Sub"]).clip(lower=0)
-    df_ret["OI Put -"] = (df_ret["OI Put Sub"] - df_ret["OI Put Main"]).clip(lower=0)
-
-    return df_ret
+    return get_df_diff(df_main, df_sub)
 
 
-def main(data_path_main, data_path_sub):
+def main(data_path_main: str, data_path_sub: str):
     props = get_file_props(data_path_main)
     df = get_data_df(data_path_main, data_path_sub, props)
 
