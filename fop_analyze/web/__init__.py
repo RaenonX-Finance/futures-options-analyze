@@ -1,3 +1,2 @@
-from .const import WEB_HEADERS
-from .props import FuturesOptionsPropNames
+from .const import WEB_HEADERS, FuturesOptionsPropNames
 from .url import make_url

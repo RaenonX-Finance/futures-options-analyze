@@ -32,10 +32,15 @@ def get_df_from_data(data_path: str, props: DataProperties):
 def get_df_from_web(prop_name: FuturesOptionsPropNames, trade_date: str, props: DataProperties):
     url = make_url(prop_name, trade_date)
 
+    print(f"Getting data from: {url}")
+
     response = requests.get(url, headers=WEB_HEADERS)
     response.raise_for_status()
 
     response_content = response.json()
+
+    if response_content["empty"]:
+        raise ValueError(f"Data from: {url} is empty")
 
     data = response_content["settlements"]
 

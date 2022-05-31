@@ -1,12 +1,13 @@
+from dataclasses import dataclass
+
 import matplotlib.pyplot as plt
 
 from fop_analyze.common import format_plot
 from fop_analyze.const import (
-    BAR_HEIGHT, COLOR_CALL, COLOR_PUT, COLOR_INCREASE, COLOR_DECREASE,
-    FACE_COLOR, FONT_NAME_MAIN, FONT_SIZE_TITLE,
+    BAR_HEIGHT, COLOR_CALL, COLOR_DECREASE, COLOR_INCREASE, COLOR_PUT, FACE_COLOR, FONT_NAME_MAIN, FONT_SIZE_TITLE,
     PLOT_HEIGHT, PLOT_WIDTH, TITLE_CALL, TITLE_PUT,
 )
-from fop_analyze.df import get_df_from_web, get_df_diff
+from fop_analyze.df import get_df_diff, get_df_from_web
 from fop_analyze.props import DataProperties
 from fop_analyze.utils import get_config
 from fop_analyze.web import FuturesOptionsPropNames
@@ -14,16 +15,45 @@ from fop_analyze.web import FuturesOptionsPropNames
 # Main date should be the latest
 # Note that OIs are prior day OIs, meaning that setting main date to 05/31 actually grabs the OI at 05/27.
 
-FOP_NAME: FuturesOptionsPropNames = "ESM22 American"
-FOP_EXPIRY: str = "06/17/22"
+
+MAIN_DATE: str = "06/01/2022"
+SUB_DATE: str = "05/31/2022"
 
 MAIN_DATE: str = "05/31/2022"
 SUB_DATE: str = "05/27/2022"
 
 
-def get_data_df(props: DataProperties):
-    df_main = get_df_from_web(FOP_NAME, MAIN_DATE, props)
-    df_sub = get_df_from_web(FOP_NAME, SUB_DATE, props)
+@dataclass(kw_only=True)
+class ChartGenerationParams:
+    fop_name: FuturesOptionsPropNames
+    expiry: str
+    main_date: str
+    sub_date: str
+
+
+CHART_PARAMS: list[ChartGenerationParams] = [
+    ChartGenerationParams(
+        fop_name="ESM22 American", expiry="06/17/22",
+        main_date=MAIN_DATE, sub_date=SUB_DATE,
+    ),
+    ChartGenerationParams(
+        fop_name="NQM22 American", expiry="06/17/22",
+        main_date=MAIN_DATE, sub_date=SUB_DATE,
+    ),
+    ChartGenerationParams(
+        fop_name="ESM22 Jun 22 W1", expiry="06/03/22",
+        main_date=MAIN_DATE, sub_date=SUB_DATE,
+    ),
+    ChartGenerationParams(
+        fop_name="NQM22 Jun 22 W1", expiry="06/03/22",
+        main_date=MAIN_DATE, sub_date=SUB_DATE,
+    ),
+]
+
+
+def get_data_df(params: ChartGenerationParams, props: DataProperties):
+    df_main = get_df_from_web(params.fop_name, params.main_date, props)
+    df_sub = get_df_from_web(params.fop_name, params.sub_date, props)
 
     df_ret = df_main.merge(df_sub, suffixes=(" Main", " Sub"), left_index=True, right_index=True)
     df_ret["OI Call B"] = df_ret[["OI Call Main", "OI Call Sub"]].min(axis=1)
@@ -36,13 +66,13 @@ def get_data_df(props: DataProperties):
     return get_df_diff(df_main, df_sub)
 
 
-def main():
+def main(params: ChartGenerationParams):
     props = DataProperties(
-        symbol=FOP_NAME.split(" ")[0],
-        expiry=FOP_EXPIRY,
-        date=MAIN_DATE,
+        symbol=params.fop_name.split(" ")[0],
+        expiry=params.expiry,
+        date=params.main_date,
     )
-    df = get_data_df(props)
+    df = get_data_df(params, props)
 
     index = df.index
     column_call_base = df["OI Call B"]
@@ -103,4 +133,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    for params in CHART_PARAMS:
+        main(params)

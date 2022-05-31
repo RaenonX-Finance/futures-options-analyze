@@ -1,4 +1,4 @@
-from .props import FOP_PROPS, FuturesOptionsPropNames
+from .const import FOP_PROPS, FuturesOptionsPropNames
 
 
 def make_url(prop_name: FuturesOptionsPropNames, trade_date: str):
