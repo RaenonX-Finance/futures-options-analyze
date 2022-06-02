@@ -19,9 +19,6 @@ from fop_analyze.web import FuturesOptionsPropNames
 MAIN_DATE: str = "06/01/2022"
 SUB_DATE: str = "05/31/2022"
 
-MAIN_DATE: str = "05/31/2022"
-SUB_DATE: str = "05/27/2022"
-
 
 @dataclass(kw_only=True)
 class ChartGenerationParams:

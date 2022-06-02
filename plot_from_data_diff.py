@@ -12,8 +12,27 @@ from fop_analyze.utils import get_config, get_file_props
 
 # Main should be the latest data
 
-DATA_PATH_MAIN = "data\\esm22-options-eom-options-exp-05_31_22-show-all-side-by-side-intraday-05-29-2022.csv"
-DATA_PATH_SUB = "data\\esm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-05-29-2022.csv"
+MAIN_DATE: str = "06-02-2022"
+SUB_DATE: str = "06-01-2022"
+
+DATA_PATHS: list[(str, str)] = [
+    (
+        f"data\\nqm22-options-friday-weekly-options-exp-06_03_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+        f"data\\nqm22-options-friday-weekly-options-exp-06_03_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+    ),
+    (
+        f"data\\nqm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+        f"data\\nqm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+    ),
+    (
+        f"data\\esm22-options-friday-weekly-options-exp-06_03_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+        f"data\\esm22-options-friday-weekly-options-exp-06_03_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+    ),
+    (
+        f"data\\esm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+        f"data\\esm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+    ),
+]
 
 
 def get_data_df(data_path_main: str, data_path_sub: str, props: DataProperties):
@@ -86,4 +105,5 @@ def main(data_path_main: str, data_path_sub: str):
 
 
 if __name__ == '__main__':
-    main(DATA_PATH_MAIN, DATA_PATH_SUB)
+    for path_main, path_sub in DATA_PATHS:
+        main(path_main, path_sub)
