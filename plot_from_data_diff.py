@@ -12,8 +12,17 @@ from fop_analyze.utils import get_config, get_file_props
 
 # Main should be the latest data
 
-MAIN_DATE: str = "06-02-2022"
-SUB_DATE: str = "06-01-2022"
+# NQM22 American
+# > https://www.barchart.com/futures/quotes/NQM22/options?futuresOptionsView=split&moneyness=allRows
+# NQM22 Jun 22 W1
+# > https://www.barchart.com/futures/quotes/NQM22/options/MQ1M22?futuresOptionsView=split&moneyness=allRows
+# ESM22 American
+# > https://www.barchart.com/futures/quotes/ESM22/options?futuresOptionsView=split&moneyness=allRows
+# ESM22 Jun 22 W1
+# > https://www.barchart.com/futures/quotes/ESM22/options/MW1M22?futuresOptionsView=split&moneyness=allRows
+
+MAIN_DATE: str = "06-03-2022"
+SUB_DATE: str = "06-02-2022"
 
 DATA_PATHS: list[(str, str)] = [
     (
