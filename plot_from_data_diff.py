@@ -14,32 +14,32 @@ from fop_analyze.utils import get_config, get_file_props
 
 # NQM22 American
 # > https://www.barchart.com/futures/quotes/NQM22/options?futuresOptionsView=split&moneyness=allRows
-# NQM22 Jun 22 W1
-# > https://www.barchart.com/futures/quotes/NQM22/options/MQ1M22?futuresOptionsView=split&moneyness=allRows
+# NQM22 Jun 22 W2
+# > https://www.barchart.com/futures/quotes/NQM22/options/MQ2M22?futuresOptionsView=split&moneyness=allRows
 # ESM22 American
 # > https://www.barchart.com/futures/quotes/ESM22/options?futuresOptionsView=split&moneyness=allRows
-# ESM22 Jun 22 W1
-# > https://www.barchart.com/futures/quotes/ESM22/options/MW1M22?futuresOptionsView=split&moneyness=allRows
+# ESM22 Jun 22 W2
+# > https://www.barchart.com/futures/quotes/ESM22/options/MW2M22?futuresOptionsView=split&moneyness=allRows
 
 MAIN_DATE: str = "06-03-2022"
 SUB_DATE: str = "06-02-2022"
 
 DATA_PATHS: list[(str, str)] = [
-    (
-        f"data\\nqm22-options-friday-weekly-options-exp-06_03_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
-        f"data\\nqm22-options-friday-weekly-options-exp-06_03_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
-    ),
-    (
-        f"data\\nqm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
-        f"data\\nqm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
-    ),
+    # (
+    #     f"data\\esm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+    #     f"data\\esm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+    # ),
+    # (
+    #     f"data\\nqm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+    #     f"data\\nqm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+    # ),
     (
         f"data\\esm22-options-friday-weekly-options-exp-06_03_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
         f"data\\esm22-options-friday-weekly-options-exp-06_03_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
     ),
     (
-        f"data\\esm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
-        f"data\\esm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+        f"data\\nqm22-options-friday-weekly-options-exp-06_03_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+        f"data\\nqm22-options-friday-weekly-options-exp-06_03_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
     ),
 ]
 

@@ -10,7 +10,7 @@ PLOT_HEIGHT = {
 }
 
 BAR_HEIGHT = {
-    "NQM22": 50,
+    "NQM22": 25,
     "ESM22": 25,
 }
 
@@ -39,15 +39,15 @@ TITLE_PUT = "OI Put"
 # Data properties
 
 PT_INTERVAL = {
-    "NQM22": 100,
+    "NQM22": 50,
     "ESM22": 50,
 }
 
 STRIKE_LOW = {
-    "NQM22": 11000,
+    "NQM22": 11500,
     "ESM22": 3500,
 }
 STRIKE_HIGH = {
-    "NQM22": 14000,
+    "NQM22": 13000,
     "ESM22": 4500,
 }
