@@ -16,8 +16,8 @@ from fop_analyze.web import FuturesOptionsPropNames
 # Note that OIs are prior day OIs, meaning that setting main date to 05/31 actually grabs the OI at 05/27.
 
 
-MAIN_DATE: str = "06/01/2022"
-SUB_DATE: str = "05/31/2022"
+MAIN_DATE: str = "06/07/2022"
+SUB_DATE: str = "06/06/2022"
 
 
 @dataclass(kw_only=True)
@@ -38,11 +38,11 @@ CHART_PARAMS: list[ChartGenerationParams] = [
         main_date=MAIN_DATE, sub_date=SUB_DATE,
     ),
     ChartGenerationParams(
-        fop_name="ESM22 Jun 22 W1", expiry="06/03/22",
+        fop_name="ESM22 Jun 22 W2", expiry="06/10/22",
         main_date=MAIN_DATE, sub_date=SUB_DATE,
     ),
     ChartGenerationParams(
-        fop_name="NQM22 Jun 22 W1", expiry="06/03/22",
+        fop_name="NQM22 Jun 22 W2", expiry="06/10/22",
         main_date=MAIN_DATE, sub_date=SUB_DATE,
     ),
 ]

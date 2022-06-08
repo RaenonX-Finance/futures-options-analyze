@@ -15,6 +15,8 @@ FuturesOptionsPropNames = Literal[
     "ESM22 American",
     "NQM22 Jun 22 W1",
     "ESM22 Jun 22 W1",
+    "NQM22 Jun 22 W2",
+    "ESM22 Jun 22 W2",
 ]
 
 FOP_PROPS: dict[FuturesOptionsPropNames, FuturesOptionsProps] = {
@@ -22,4 +24,6 @@ FOP_PROPS: dict[FuturesOptionsPropNames, FuturesOptionsProps] = {
     "ESM22 American": FuturesOptionsProps(month_year="EZM22", product_id=138),
     "NQM22 Jun 22 W1": FuturesOptionsProps(month_year="QN1M22", product_id=5395),
     "ESM22 Jun 22 W1": FuturesOptionsProps(month_year="EW1M22", product_id=2915),
+    "NQM22 Jun 22 W2": FuturesOptionsProps(month_year="QN2M22", product_id=5396),
+    "ESM22 Jun 22 W2": FuturesOptionsProps(month_year="EW2M22", product_id=2916),
 }
