@@ -5,13 +5,13 @@ MARGIN_Y = 0.07
 
 PLOT_WIDTH = 10
 PLOT_HEIGHT = {
-    "NQM22": 8,
-    "ESM22": 5,
+    "NQM22": 10,
+    "ESM22": 10,
 }
 
 BAR_HEIGHT = {
     "NQM22": 25,
-    "ESM22": 25,
+    "ESM22": 5,
 }
 
 SPACE = {
@@ -40,14 +40,14 @@ TITLE_PUT = "OI Put"
 
 PT_INTERVAL = {
     "NQM22": 50,
-    "ESM22": 50,
+    "ESM22": 10,
 }
 
 STRIKE_LOW = {
-    "NQM22": 11500,
-    "ESM22": 3500,
+    "NQM22": 10500,
+    "ESM22": 3600,
 }
 STRIKE_HIGH = {
     "NQM22": 13000,
-    "ESM22": 4500,
+    "ESM22": 4150,
 }
