@@ -1,10 +1,11 @@
+import os
 import re
 
 from .props import DataProperties
 
 
 def get_file_props(data_path: str) -> DataProperties:
-    _, path = data_path.split("\\")
+    _, path = os.path.normpath(data_path).rsplit(os.sep, 1)
 
     regex = r"(?P<Symbol>\w+)-.+-exp-(?P<Expiry>[\d_]+)-.+-(?P<DateM>\d{2})-(?P<DateD>\d{2})-(?P<DateY>\d{4})\.csv"
 
