@@ -21,8 +21,8 @@ from fop_analyze.utils import get_config, get_file_props
 # ESM22 Jun 22 W2
 # > https://www.barchart.com/futures/quotes/ESM22/options/MW2M22?futuresOptionsView=split&moneyness=allRows
 
-MAIN_DATE: str = "06-08-2022"
-SUB_DATE: str = "06-07-2022"
+MAIN_DATE: str = "06-09-2022"
+SUB_DATE: str = "06-08-2022"
 
 DATA_PATHS: list[(str, str)] = [
     (
