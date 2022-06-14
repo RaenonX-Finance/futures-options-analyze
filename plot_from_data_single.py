@@ -10,7 +10,7 @@ from fop_analyze.common import format_plot
 from fop_analyze.df import get_df_from_data
 from fop_analyze.utils import get_config, get_file_props
 
-DATA_PATHS = glob.glob("data/*-06-06-2022.csv")
+DATA_PATHS = glob.glob("D:/UserData/Downloads/*-06-10-2022.csv")
 
 
 def main(data_path: str):

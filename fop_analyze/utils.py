@@ -29,4 +29,7 @@ def get_config(props: DataProperties, config_body: float | int | dict[str, str |
     if config := config_body.get(props.symbol):
         return config
 
-    return config_body["_"]
+    if config := config_body.get("_"):
+        return config
+
+    raise ValueError(f"Config doesn't have key of `{props.symbol}`: {config_body}")

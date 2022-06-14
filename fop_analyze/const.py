@@ -8,18 +8,21 @@ PLOT_HEIGHT = {
     "NQM22": 10,
     "NQU22": 10,
     "ESM22": 10,
+    "ESU22": 10,
 }
 
 BAR_HEIGHT = {
     "NQM22": 25,
     "NQU22": 25,
     "ESM22": 5,
+    "ESU22": 5,
 }
 
 SPACE = {
     "NQM22": 0.17,
     "NQU22": 0.17,
     "ESM22": 0.14,
+    "ESU22": 0.14,
 }
 
 FONT_COLOR = "#525252"
@@ -45,15 +48,18 @@ PT_INTERVAL = {
     "NQM22": 50,
     "NQU22": 50,
     "ESM22": 10,
+    "ESU22": 10,
 }
 
 STRIKE_LOW = {
     "NQM22": 10500,
     "NQU22": 10500,
     "ESM22": 3600,
+    "ESU22": 3600,
 }
 STRIKE_HIGH = {
     "NQM22": 13000,
     "NQU22": 13000,
     "ESM22": 4150,
+    "ESU22": 4150,
 }
