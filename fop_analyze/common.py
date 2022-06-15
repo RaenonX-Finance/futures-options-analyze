@@ -58,4 +58,5 @@ def format_plot(fig, axes, props: DataProperties, index):
         right=1 - get_config(props, MARGIN_X)
     )
     plt.tick_params(left=False)
+    plt.gca().invert_yaxis()
     plt.show()
