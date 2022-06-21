@@ -12,31 +12,19 @@ from fop_analyze.utils import get_config, get_file_props
 
 # Main should be the latest data
 
-# NQM22 American
-# > https://www.barchart.com/futures/quotes/NQM22/options?futuresOptionsView=split&moneyness=allRows
 # NQU22 Jun 22 EOM
 # > https://www.barchart.com/futures/quotes/NQM22/options/MQ6M22?moneyness=allRows&futuresOptionsView=split
 # NQU22 American
 # > https://www.barchart.com/futures/quotes/NQU22/options?futuresOptionsView=split&moneyness=allRows
-# ESM22 American
-# > https://www.barchart.com/futures/quotes/ESM22/options?futuresOptionsView=split&moneyness=allRows
 # ESU22 Jun 22 EOM
 # > https://www.barchart.com/futures/quotes/ESM22/options/T8M22?moneyness=allRows&futuresOptionsView=split
 # ESU22 American
 # > https://www.barchart.com/futures/quotes/ESU22/options?futuresOptionsView=split&moneyness=allRows
 
-MAIN_DATE: str = "06-17-2022"
-SUB_DATE: str = "06-16-2022"
+MAIN_DATE: str = "06-21-2022"
+SUB_DATE: str = "06-17-2022"
 
 DATA_PATHS: list[(str, str)] = [
-    (
-        f"data\\esm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
-        f"data\\esm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
-    ),
-    (
-        f"data\\nqm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
-        f"data\\nqm22-options-american-options-exp-06_17_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
-    ),
     (
         f"data\\esm22-options-eom-options-exp-06_30_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
         f"data\\esm22-options-eom-options-exp-06_30_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
