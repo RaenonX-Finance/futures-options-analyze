@@ -12,17 +12,21 @@ from fop_analyze.utils import get_config, get_file_props
 
 # Main should be the latest data
 
-# NQU22 Jun 22 EOM
-# > https://www.barchart.com/futures/quotes/NQM22/options/MQ6M22?moneyness=allRows&futuresOptionsView=split
+# NQU22 Jul W1 22
+# > https://www.barchart.com/futures/quotes/NQU22/options/MQ1N22?moneyness=allRows&futuresOptionsView=split
+# NQU22 Jul W2 22
+# > https://www.barchart.com/futures/quotes/NQU22/options/MQ2N22?moneyness=allRows&futuresOptionsView=split
 # NQU22 American
 # > https://www.barchart.com/futures/quotes/NQU22/options?futuresOptionsView=split&moneyness=allRows
-# ESU22 Jun 22 EOM
-# > https://www.barchart.com/futures/quotes/ESM22/options/T8M22?moneyness=allRows&futuresOptionsView=split
+# ESU22 Jul W1 22
+# > https://www.barchart.com/futures/quotes/ESU22/options/MW1N22?moneyness=allRows&futuresOptionsView=split
+# ESU22 Jul W2 22
+# > https://www.barchart.com/futures/quotes/ESU22/options/MW2N22?moneyness=allRows&futuresOptionsView=split
 # ESU22 American
 # > https://www.barchart.com/futures/quotes/ESU22/options?futuresOptionsView=split&moneyness=allRows
 
-MAIN_DATE: str = "06-29-2022"
-SUB_DATE: str = "06-28-2022"
+MAIN_DATE: str = "06-30-2022"
+SUB_DATE: str = "06-29-2022"
 
 DATA_PATHS: list[(str, str)] = [
     (
