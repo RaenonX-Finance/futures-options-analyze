@@ -30,12 +30,20 @@ SUB_DATE: str = "06-29-2022"
 
 DATA_PATHS: list[(str, str)] = [
     (
-        f"data\\esm22-options-eom-options-exp-06_30_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
-        f"data\\esm22-options-eom-options-exp-06_30_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+        f"data\\esu22-options-friday-weekly-options-exp-07_01_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+        f"data\\esu22-options-friday-weekly-options-exp-07_01_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
     ),
     (
-        f"data\\nqm22-options-eom-options-exp-06_30_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
-        f"data\\nqm22-options-eom-options-exp-06_30_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+        f"data\\nqu22-options-friday-weekly-options-exp-07_01_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+        f"data\\nqu22-options-friday-weekly-options-exp-07_01_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+    ),
+    (
+        f"data\\nqu22-options-friday-weekly-options-exp-07_08_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+        f"data\\nqu22-options-friday-weekly-options-exp-07_08_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+    ),
+    (
+        f"data\\nqu22-options-friday-weekly-options-exp-07_08_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+        f"data\\nqu22-options-friday-weekly-options-exp-07_08_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
     ),
     (
         f"data\\esu22-options-american-options-exp-09_16_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
