@@ -55,6 +55,8 @@ DATA_PATHS: list[(str, str)] = [
     ),
 ]
 
+SAVE_DIR: str = r"D:\UserData\Downloads"
+
 
 def get_data_df(data_path_main: str, data_path_sub: str, props: DataProperties):
     df_main = get_df_from_data(data_path_main, props)
@@ -122,7 +124,7 @@ def main(data_path_main: str, data_path_sub: str):
         color=COLOR_PUT,
     )
 
-    format_plot(fig, axes, props, index)
+    format_plot(fig, axes, props, index, save_file_path=rf"{SAVE_DIR}\{props.save_file_name}.png")
 
 
 if __name__ == '__main__':

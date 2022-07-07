@@ -1,14 +1,11 @@
 import matplotlib.pyplot as plt
 
-from .const import (
-    FONT_SIZE_LABEL, FONT_SIZE_MAIN_TITLE, FONT_NAME_MAIN, FONT_COLOR,
-    MARGIN_X, MARGIN_Y, SPACE
-)
+from .const import (FONT_COLOR, FONT_NAME_MAIN, FONT_SIZE_LABEL, FONT_SIZE_MAIN_TITLE, MARGIN_X, MARGIN_Y, SPACE)
 from .props import DataProperties
 from .utils import get_config, get_plot_title
 
 
-def format_plot(fig, axes, props: DataProperties, index):
+def format_plot(fig, axes, props: DataProperties, index, *, save_file_path: str | None = None):
     fig.tight_layout()
 
     # If you have positive numbers and want to invert the x-axis of the left plot
@@ -59,4 +56,9 @@ def format_plot(fig, axes, props: DataProperties, index):
     )
     plt.tick_params(left=False)
     plt.gca().invert_yaxis()
-    plt.show()
+
+    if save_file_path:
+        print(f"Figure saved to {save_file_path}")
+        plt.savefig(save_file_path)
+    else:
+        plt.show()
