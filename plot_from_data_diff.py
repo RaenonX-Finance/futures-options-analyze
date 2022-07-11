@@ -25,8 +25,8 @@ from fop_analyze.utils import get_config, get_file_props
 # ESU22 American
 # > https://www.barchart.com/futures/quotes/ESU22/options?futuresOptionsView=split&moneyness=allRows
 
-MAIN_DATE: str = "07-08-2022"
-SUB_DATE: str = "07-07-2022"
+MAIN_DATE: str = "07-11-2022"
+SUB_DATE: str = "07-08-2022"
 
 DATA_PATHS: list[(str, str)] = [
     (
@@ -38,12 +38,12 @@ DATA_PATHS: list[(str, str)] = [
         f"data\\nqu22-options-eom-options-exp-07_29_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
     ),
     (
-        f"data\\esu22-options-friday-weekly-options-exp-07_08_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
-        f"data\\esu22-options-friday-weekly-options-exp-07_08_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+        f"data\\esu22-options-friday-weekly-options-exp-07_15_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+        f"data\\esu22-options-friday-weekly-options-exp-07_15_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
     ),
     (
-        f"data\\nqu22-options-friday-weekly-options-exp-07_08_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
-        f"data\\nqu22-options-friday-weekly-options-exp-07_08_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+        f"data\\nqu22-options-friday-weekly-options-exp-07_15_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+        f"data\\nqu22-options-friday-weekly-options-exp-07_15_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
     ),
     (
         f"data\\esu22-options-american-options-exp-09_16_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
