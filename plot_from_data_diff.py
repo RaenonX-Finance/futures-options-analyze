@@ -12,14 +12,14 @@ from fop_analyze.utils import get_config, get_file_props
 
 # Main should be the latest data
 
-# NQU22 Jul W3 22
-# > https://www.barchart.com/futures/quotes/NQU22/options/MQ3N22?moneyness=allRows&futuresOptionsView=split
+# NQU22 Jul W4 22
+# > https://www.barchart.com/futures/quotes/NQU22/options/MQ4N22?moneyness=allRows&futuresOptionsView=split
 # NQU22 Jul EOM 22
 # > https://www.barchart.com/futures/quotes/NQU22/options/MQ6N22?moneyness=allRows&futuresOptionsView=split
 # NQU22 American
 # > https://www.barchart.com/futures/quotes/NQU22/options?futuresOptionsView=split&moneyness=allRows
-# ESU22 Jul W3 22
-# > https://www.barchart.com/futures/quotes/ESU22/options/MW3N22?moneyness=allRows&futuresOptionsView=split
+# ESU22 Jul W4 22
+# > https://www.barchart.com/futures/quotes/ESU22/options/MW4N22?moneyness=allRows&futuresOptionsView=split
 # ESU22 Jul EOM 22
 # > https://www.barchart.com/futures/quotes/ESU22/options/T8N22?moneyness=allRows&futuresOptionsView=split
 # ESU22 American
@@ -38,12 +38,12 @@ DATA_PATHS: list[(str, str)] = [
         f"data\\nqu22-options-eom-options-exp-07_29_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
     ),
     (
-        f"data\\esu22-options-friday-weekly-options-exp-07_15_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
-        f"data\\esu22-options-friday-weekly-options-exp-07_15_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+        f"data\\esu22-options-friday-weekly-options-exp-07_22_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+        f"data\\esu22-options-friday-weekly-options-exp-07_22_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
     ),
     (
-        f"data\\nqu22-options-friday-weekly-options-exp-07_15_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
-        f"data\\nqu22-options-friday-weekly-options-exp-07_15_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
+        f"data\\nqu22-options-friday-weekly-options-exp-07_22_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
+        f"data\\nqu22-options-friday-weekly-options-exp-07_22_22-show-all-side-by-side-intraday-{SUB_DATE}.csv"
     ),
     (
         f"data\\esu22-options-american-options-exp-09_16_22-show-all-side-by-side-intraday-{MAIN_DATE}.csv",
