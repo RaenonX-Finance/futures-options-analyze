@@ -12,14 +12,14 @@ from fop_analyze.utils import get_config, get_file_props
 
 # Main should be the latest data
 
-# NQU22 Aug W1 22
-# > https://www.barchart.com/futures/quotes/NQU22/options/MQ1Q22?moneyness=allRows&futuresOptionsView=split
+# NQU22 Aug W2 22
+# > https://www.barchart.com/futures/quotes/NQU22/options/MQ2Q22?moneyness=allRows&futuresOptionsView=split
 # NQU22 Aug EOM 22
 # > https://www.barchart.com/futures/quotes/NQU22/options/MQ6Q22?moneyness=allRows&futuresOptionsView=split
 # NQU22 American
 # > https://www.barchart.com/futures/quotes/NQU22/options?futuresOptionsView=split&moneyness=allRows
-# ESU22 Aug W1 22
-# > https://www.barchart.com/futures/quotes/ESU22/options/MW1Q22?moneyness=allRows&futuresOptionsView=split
+# ESU22 Aug W2 22
+# > https://www.barchart.com/futures/quotes/ESU22/options/MW2Q22?moneyness=allRows&futuresOptionsView=split
 # ESU22 Aug EOM 22
 # > https://www.barchart.com/futures/quotes/ESU22/options/T8Q22?moneyness=allRows&futuresOptionsView=split
 # ESU22 American
